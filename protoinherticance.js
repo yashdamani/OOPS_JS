@@ -2,11 +2,13 @@
 
 function Teacher() {
 	this.subject = 'Computer Science';
+	this.teacherName = "THS";
 }
 
 
 function Student() {
-	this.name = "Prashanth'"; 
+	this.studentName = "Prashanth"; 
+	
 }
 
 Student.prototype = new Teacher(); //Student inherits the properties from Teacher
@@ -14,3 +16,5 @@ Student.prototype = new Teacher(); //Student inherits the properties from Teache
 var object1 = new Student();
 
 console.log(object1.subject);
+console.log(object1.teacherName);
+console.log(object1.studentName);
