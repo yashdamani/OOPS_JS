@@ -1,19 +1,30 @@
-class Teacher {
-	constructor(subject) {
+class A {
+	constructor(age, name, gender) {
+		this.age = age;
+		this.name = name;
+		this.gender = gender;
+	}
+
+	hello() {
+		console.log("hey i am " + this.name);
+	}
+
+	bye() {
+		console.log("bye " + this.name);
+	}
+}
+
+class B extends A{
+	constructor(age, name, gender, interest, subject) {
+		super(age, name, gender);
+
+		this.interest = interest;
 		this.subject = subject;
 	}
 }
 
-class Student extends Teacher {
-	constructor(topic) {
-		super(topic);
-			this.topic = topic;
-		
-	}
-}
-
-var obj1 = new Student("Operating Systems");
-
-console.log(obj1.subject);
-
-
+var student = new B("12", "Potter", 20, "Spells", "Magic");
+console.log(student);
+student.hello();
+student.bye();
+console.log(student.subject);
